@@ -42,6 +42,9 @@ my $pgLen=$ARGV[3];     # Output Length in results
 my $uid='v32itas'; #$ARGV[5];   # User Identifier
 my $rooturl = 'http://api.sandbox.yellowapi.com/FindBusiness/';
 
+# I'm noob in web related stuff totaly. I accidently came up with idea
+# to construct URL this way, and it saved me tens of lines of code
+# and ATM I have no idea how it suppose to be done. But I'm learning.
 # Request parameters array
 my @tR = ('http://api.sandbox.yellowapi.com/FindBusiness/');
 $tR[0] = "$rooturl";
@@ -53,13 +56,12 @@ $tR[4] = "&apikey=$apikey";
 $tR[5] = "&UID=$uid";
 
 # Constructing query url out from parameters array
-my $query = join('',@tR);
+my $query = join('',@tR); # Killing spaces between array elements and joining them into single string
 
 # Making filename based on query parameters
 my $filename;
 $filename = "$what$where$fmt$pgLen.json";
 my $curfile = $filename;
-my $ppfile = "pp$filename";
 # Defining log file names
 my $logname = 'yapi.log';
 my $errlog = 'yapierr.log';
@@ -76,7 +78,8 @@ if (-e $curfile)
         close(FILE);
 
         # Exiting script with error.
-        exit 1;
+        exit 1; # There are limitations for using API, so this is to prevent
+                # pointless waste of tires. 
 } else 
 {
         print "\nfile name for this query will be $curfile\n\n";
