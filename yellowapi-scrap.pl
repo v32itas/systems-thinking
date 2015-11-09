@@ -1,6 +1,7 @@
 
 # v32itas/systems-thinking (dedicated amateur)
-# yellowapi-scrap.pl
+# yellowapi-scrap.pl (yellowapi data extractor)
+#
 ##########################################################################
 # This is my first perl script, mess indeed, but oh well perl is awesome
 # As well as this is the first time I'm using github and this script is
