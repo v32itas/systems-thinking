@@ -15,6 +15,8 @@
 # currently using underscore and it works fine.
 #
 # This script is just data extractor, lame and incomplete
+#
+# And I got to say that I have copied few lines from online manuals
 ##########################################################################
 
 #!/usr/bin/perl
