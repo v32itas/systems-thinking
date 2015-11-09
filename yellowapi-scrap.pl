@@ -20,13 +20,13 @@
 ##########################################################################
 
 #!/usr/bin/perl
-use strict;
-use warnings;
-use autodie;
-use JSON;
-use Path::Class;
-use LWP::Simple;
-use LWP::UserAgent;
+use strict; # Important for noobs like me
+use warnings; # Important for noobs like me 
+use autodie; # Not really sure
+use JSON; # For JSON, but I havent mastered it yet, so I'm using node underscore for JSON pretty printing
+use Path::Class; # Was something about directories, but not sure If I used it.
+use LWP::Simple; # for sending GET POST ....
+use LWP::UserAgent; # for pretending that I'm using phone to get easier captchas on outlook.com (joke)
 
 my $num_args = $#ARGV + 1;
 if ($num_args != 4) {
@@ -34,6 +34,7 @@ if ($num_args != 4) {
     exit;
 }
 
+# Default parameters and arguments assigned to variables
 my $what=$ARGV[0];      # Search Object
 my $where=$ARGV[1];     # Search Location
 my $apikey='You need to register to get apikey'; # You need to register to get API Key
@@ -70,13 +71,10 @@ my $errlog = 'yapierr.log';
 if (-e $curfile) 
 {
         print "\n$curfile exists! Exiting script!!!\n\n";
-
-       
         # Writing to errlog file before exiting
         open(FILE, ">>$errlog");
         print FILE "\n$query $filename Already done!!!\n";
         close(FILE);
-
         # Exiting script with error.
         exit 1; # There are limitations for using API, so this is to prevent
                 # pointless waste of tires. 
@@ -88,18 +86,14 @@ if (-e $curfile)
         close(FILE);
 };
 
-
-
+# I often use wrong definitions for stuff that I'm not familiar with.
 open(FILE, ">$filename");
 # Creating an User Agent
 my $agent = LWP::UserAgent->new();
-
 # Sending GET request
 my $response = $agent->get($query);
-
 # Checking Response message
 die 'http status: ' . $response->code . ' ' . $response->message unless ($response->is_success);
-
 # Printing out raw Response message
 my @raw = $response->content();
 print FILE $response->content();
