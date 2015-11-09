@@ -99,3 +99,4 @@ my @raw = $response->content();
 print FILE $response->content();
 
 close(FILE);
+exit 0;
