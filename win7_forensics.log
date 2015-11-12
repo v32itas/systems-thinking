@@ -22,7 +22,7 @@ MSI (c) (74:A0) [16:45:15:959]: Cloaking enabled.
 MSI (c) (74:A0) [16:45:15:959]: Attempting to enable all disabled privileges before calling Install on Server
 MSI (c) (74:A0) [16:45:15:995]: Incrementing counter to disable shutdown. Counter after increment: 0
 MSI (s) (A0:44) [16:45:16:499]: Running installation inside multi-package transaction C:\Users\ILVINA~1\AppData\Local\Temp\\Lang_en-GB.msi
-MSI (s) (A0:44) [16:45:16:500]: Grabbed execution mutex.
+MSI (s) (A0:44) [16:45:16:500]: Grabbed execution mutex
 MSI (s) (A0:74) [16:45:16:509]: Resetting cached policy values
 MSI (s) (A0:74) [16:45:16:509]: Machine policy value 'Debug' is 0
 MSI (s) (A0:74) [16:45:16:509]: ******* RunEngine:
