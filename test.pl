@@ -64,7 +64,7 @@ my $html = do {local $/; $response->content()};
 
 my $dom = Mojo::DOM->new($html);
 
-for my $script($dom->find('script')->text->each) {
+for my $script($dom->find('script')->each) {
     print "$script\n";
 }
 
