@@ -11,7 +11,7 @@ use warnings;
 use Getopt::Long;
 use LWP::Simple; # for sending GET POST ....
 use LWP::UserAgent; # for pretending that I'm using phone to get easier captchas on outlook.com (joke)
-use Mojo::DOM;
+#use Mojo::DOM;
 my $protocol = '';
 my $anonlvl = '';
 my $availability = '';
