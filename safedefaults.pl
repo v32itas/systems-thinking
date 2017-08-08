@@ -1,3 +1,12 @@
+# Just install LWP::Simple and LWP::UserAgent for slackware
+# There's possibility to give arguments to script, but I recommend
+# just launching it by default slow but steady way, no need for proxies
+# --protocol=socks4 --protocol=socks5 --protocol=https --protocol=http
+# --delay=12 # in seconds between queries, safe default is 12
+# --anonlvl=4 # integer up to 4 higher meansmore anonymous proxy
+# --pages=9999 # default is 9999 but there's just about 400-500 pages at all each contain 20 proxies
+# --availability=90 .. default is empty its % of proxy uptime
+# as for every other info on proxies I suggest using other tools to analyze them.
 #!/usr/local/bin/perl -w
  
 @months = qw( Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec );
