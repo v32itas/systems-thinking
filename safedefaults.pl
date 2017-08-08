@@ -26,7 +26,7 @@ my $country_filter = '';
 my $city_filter = '';
 my $region_filter = '';
 my $offset = '0';
-my $pages = '1';
+my $pages = '9999';
 my $delay = '12';
 my $filenameleeched = join "", $curdate,$protocol,"leeched";
 GetOptions ("protocol=s" => \$protocol,    
